@@ -7,10 +7,27 @@
     font-family: 'Roboto', 'Sans-serif'
 }
 
-
-
 li {
     list-style-type: none;
+}
+
+section {
+    background-color: rgb(245, 245, 245);
+}
+
+/* LANDING PAGE */
+
+#landing-page {
+    min-height: 100vh;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1000px;
 }
 
 /* NAVIGATION */
@@ -36,7 +53,7 @@ nav {
 }
 
 .nav__link {
-    margin: 0 auto;
+    margin: 0 12px;
 }
 
 .nav__link--anchor {
