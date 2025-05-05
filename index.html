@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jordan Atkinson</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -59,13 +60,13 @@
                 </p>
                 <div class="social__list">
                     <a href="" target="_blank" class="social__link click">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fa-brands fa-linkedin"></i>
                     </a>
                     <a href="" target="_blank" class="social__link click">
-                        <i class="fab fa-github"></i>
+                        <i class="fa-brands fa-github"></i>
                     </a>
                     <a href="" target="_blank" class="social__link click">
-                        <i class="fas fa-file-pdf"></i>
+                        <i class="fa-solid fa-file"></i>
                     </a>
                 </div>
             </div>
@@ -123,11 +124,19 @@
                         <input type="input" name="user_email" type="email" required></input>
                     </div>
                     <div class="form__item">
-                        <label class="form__item--label">Name</label>
+                        <label class="form__item--label">Message</label>
                         <textarea type="input" name="message" type="text" required></textarea>
                     </div>
+                    <button id="contact__submit" class="form__submit">Send it to me</button>
                 </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to our future discussions!
+                </div>
             </div>
+            <i class="fa-solid fa-x modal__exit click"></i>
         </div>
     </section>
     <section id="projects">
