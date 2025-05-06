@@ -326,6 +326,10 @@ nav {
     font-weight: 700;
 }
 
+.fa-adjust {
+    font-size: 20px;
+}
+
 /* MODAL */
 
 .modal {
@@ -336,11 +340,19 @@ nav {
     width: 90%;
     max-width: 1100px;
     height: 700px;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
     border-radius: 20px;
     overflow: hidden;
     display: flex;
+    visibility: hidden;
+    z-index: -1;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
+
+.modal--open .modal {
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    visibility: visible;
+  }
 
 .modal__half {
     width: 50%;

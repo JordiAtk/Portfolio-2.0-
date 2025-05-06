@@ -15,7 +15,7 @@ function contact(event) {
         'FxsojxRC2otipimqB'
     ).then(() => {
         loading.classList.remove("modal__overlay--visible");
-        success.classList += " modal__overlay--visible"
+        success.classList += " modal__overlay--visible";
     }).catch(() => {
         loading.classList.remove("modal__overlay--visible");
         alert (
@@ -23,3 +23,12 @@ function contact(event) {
         );
     })
 }
+
+function toggleModal() {
+    if (isModalOpen) {
+      isModalOpen = false;
+      return document.body.classList.remove("modal--open");
+    }
+    isModalOpen = true;
+    document.body.classList += " modal--open";
+  }
