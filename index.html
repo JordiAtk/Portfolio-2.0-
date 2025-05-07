@@ -41,7 +41,7 @@
                     link__hover-effect--black
                     ">Projects</a>
                 </li>
-            <ul class="nav__link--list">
+            <ul class="nav__link--list" onclick="toggleModal()">
                 <li class="nav__link">
                     <a href="#" class="
                     nav__link--anchor
@@ -61,13 +61,13 @@
         </nav>
         <header class="header">
             <div class="header__content">
-                <h1 class="title">Hey</h1>
+                <h1 class="title">Hey,</h1>
                 <h1 class="title dark-red">I'm Jordan.</h1>
-                <p class="header__para">I'm a <b class="dark-red">Frontend Software Engineer</b> who diligently puts time into 
+                <p class="header__para">I'm a <b class="dark-red click">Frontend Software Engineer</b> who diligently puts time into 
                 <br>
                 developing web applications to effective and enjoyable for their users. 
                 <br>
-                View my portfolio to learn <b class="dark-red">about me.</b>   
+                View my portfolio to learn <b class="dark-red" onclick="toggleModal()">about me.</b>   
                 </p>
                 <div class="social__list">
                     <a href="" target="_blank" class="social__link click">
@@ -119,6 +119,7 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
+                <i class="fa-solid fa-x modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">
                     Let's get accquainted!
                 </h3>
@@ -147,7 +148,6 @@
                     Thanks for the message! Looking forward to our future discussions!
                 </div>
             </div>
-            <i class="fa-solid fa-x modal__exit click"></i>
         </div>
     </section>
     <section id="projects">

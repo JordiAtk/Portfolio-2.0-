@@ -202,6 +202,22 @@ html {
     color: #242424;
   }
 
+nav,
+.scroll,
+.header {
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 800ms;
+}
+
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms;
+}
+
 /* LANDING PAGE */
 
 #landing-page {
@@ -361,11 +377,17 @@ nav {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    transition: all 300ms ease-in;
+}
+
+.modal--open .modal__about, 
+.modal--open .modal__contact {
+    transform: translateX(0%);
 }
 
 .modal__about {
     background-color: rgb(245, 245, 245);
-    
+    transform: translateX(-110%);
 }
 
 .modal__languages {
@@ -405,6 +427,7 @@ transform: scale(1);
 .modal__contact {
     background-color: #242424;
     color: #fff;
+    transform: translateX(110%);
 }
 
 .modal__title {
@@ -453,7 +476,7 @@ transform: scale(1);
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: -1;
@@ -475,6 +498,7 @@ transform: scale(1);
 
 .modal__overlay--visible {
     z-index: 1;
+    display: flex;
 }
 
 .fa-spinner {
